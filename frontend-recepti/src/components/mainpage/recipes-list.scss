@@ -1,0 +1,31 @@
+.recipe-list {
+    padding: 40px 20px; /* Отступы вокруг секции рецептов */
+}
+
+.recipe-list h2 {
+    text-align: center; /* Центрирование заголовка секции */
+}
+
+.recipe-card {
+    background-color: #1e1e1e; /* Цвет фона карточки рецепта */
+    border-radius: 8px; /* Закругление углов карточки */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Тень для карточки */
+    margin-bottom: 20px; /* Отступ между карточками */
+    padding: 15px; /* Внутренние отступы карточки */
+}
+
+.recipe-card img {
+    width: 100%; /* Ширина изображения на всю карточку */
+    border-radius: 8px; /* Закругление углов изображения */
+}
+.view-recipe-button {
+    background-color: #03dac5; /* Цвет кнопки просмотра рецепта */
+    color: white; 
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.view-recipe-button:hover {
+    background-color: #02b89c; /* Цвет кнопки при наведении */
+}
