@@ -1,5 +1,5 @@
 {
-    "name": "backend-recepti",
+    "name": "@recepti/backend-recepti",
     "private": true,
     "version": "0.0.0",
     "scripts": {
@@ -7,9 +7,16 @@
         "build": "tsc --build ./"
     },
     "devDependencies": {
+        "@types/cors": "^2.8.17",
+        "@types/express": "^5.0.0",
         "@types/node": "^22.10.2",
         "ts-node": "^10.9.2",
         "ts-node-dev": "^2.0.0",
         "typescript": "^5.7.2"
+    },
+    "dependencies": {
+        "@trpc/server": "^10.45.2",
+        "cors": "^2.8.5",
+        "express": "^4.21.2"
     }
 }

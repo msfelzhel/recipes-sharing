@@ -9,6 +9,7 @@ lerna-debug.log*
 
 backend-recepti/node_modules
 frontend-recepti/node_modules
+node_modules
 dist
 dist-ssr
 *.local
