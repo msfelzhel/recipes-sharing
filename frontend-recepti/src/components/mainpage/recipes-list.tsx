@@ -1,5 +1,7 @@
 import "./recipes-list.scss";
 import {trpc} from "../../lib/trpc";
+import { Link } from "react-router-dom";
+import { getRecipe } from "../../lib/routes";
 
 export default function RecipesList() {
     const {data, error, isLoading, isFetching, isError} = trpc.getRecipes.useQuery();
@@ -17,7 +19,7 @@ export default function RecipesList() {
                     <div className="recipe-card">
                         <h3>{recipe.name}</h3>
                         <p>{recipe.description}</p>
-                        <button className="view-recipe-button">Смотреть Рецепт</button>
+                        <button className="view-recipe-button"><Link to={getRecipe({recipeNick: recipe.nick})}>Смотреть Рецепт</Link></button>
                     </div>
                 );
             })}
