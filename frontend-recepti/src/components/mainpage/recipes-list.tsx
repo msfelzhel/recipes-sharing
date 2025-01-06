@@ -1,9 +1,10 @@
 import "./recipes-list.scss";
 import {trpc} from "../../lib/trpc";
-import { Link } from "react-router-dom";
-import { getRecipe } from "../../lib/routes";
+import { Link, useParams } from "react-router-dom";
+import { getRecipe, viewRecipeRouteParams } from "../../lib/routes";
 
 export default function RecipesList() {
+    const {recipeNick} = useParams() as viewRecipeRouteParams
     const {data, error, isLoading, isFetching, isError} = trpc.getRecipes.useQuery();
     if (isError) {
         return <span>{error.message}</span>;
@@ -13,7 +14,7 @@ export default function RecipesList() {
     }
     return (
         <section id="recipes" className="recipe-list">
-            <h2>Популярные Рецепты</h2>
+            <h2>{recipeNick}</h2>
             {data.recipes.map((recipe) => {
                 return (
                     <div className="recipe-card">

@@ -5,7 +5,7 @@ import Header from "./components/mainpage/header";
 import {TrpcProvider} from "./lib/trpc";
 import { MainPage } from "./pages/MainPage";
 import RecipesList from "./components/mainpage/recipes-list";
-import { GetMainPage, getRecipe } from "./lib/routes";
+import { GetMainPage, getRecipe, viewRecipeRouteParams } from "./lib/routes";
 
 export function App() {
     return (
@@ -15,7 +15,7 @@ export function App() {
                 <BrowserRouter>
                 <Routes>
                     <Route path={GetMainPage()} element={<MainPage />} />
-                    <Route path={getRecipe({recipeNick: ":recipeNick"})} element={<RecipesList />} />
+                    <Route path={getRecipe(viewRecipeRouteParams)} element={<RecipesList />} />
                 </Routes>
                 </BrowserRouter>
                 <AboutUs />

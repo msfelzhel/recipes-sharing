@@ -3,7 +3,6 @@ import RecipesList from "../../components/mainpage/recipes-list";
 import Welcome from "../../components/mainpage/welcome";
 
 export const MainPage = () => {
-    
     return (
         <>
             <Welcome />
